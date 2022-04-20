@@ -3,6 +3,7 @@
     "name": "greenclick",
     "slug": "greenclick",
     "version": "1.0.0",
+    "entryPoint": "./src/app",
     "assetBundlePatterns": [
       "**/*"
     ]
