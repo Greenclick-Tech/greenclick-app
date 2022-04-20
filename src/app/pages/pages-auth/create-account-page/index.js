@@ -29,6 +29,37 @@ const CreateAccount = ({navigation}) => {
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
 
+    // const {email, fullname, password} = route.params;
+    // const [fluent, setFluent] = useState('')
+    // const [native, setNative] = useState('')
+    // const [level, setLevel] = useState(0)
+
+    // Signup Req EX
+
+    // const HandleSignup = async(email, fullname, password, fluent, native, level) => {
+    //     console.log(email, fullname, password, fluent, native, level)
+    //     axios({
+    //         method: 'post',
+    //         url: 'http://10.0.2.2:8080/api/users/create',
+    //         data: {
+    //             email: email,
+    //             fullname: fullname,
+    //             password: password,
+    //             fluent_language: native,
+    //             learning_language: fluent,
+    //             learning_level: level
+    //         }
+    //     })
+    //     .then((res)=> {
+    //         navigation.navigate('Completion', {
+    //             email: res.email
+    //         })
+    //     })
+    //     .catch((err)=> {
+    //         console.log(err, "error")
+    //     })
+    // }
+
     const {login} = useContext(AuthContext);
     return (
         <Cont>
@@ -76,7 +107,7 @@ const CreateAccount = ({navigation}) => {
                 <ButtonFooter
                     text={"Already have an Account? Login"}
                     onPress={()=> {
-                        navigation.navigate('LoginCred')
+                        navigation.navigate('Login  Cred')
                     }}
                 />
             </ButtonContainer>
