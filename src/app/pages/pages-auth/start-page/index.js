@@ -1,7 +1,9 @@
-import React, {useContext} from 'react';
+import React, {useContext, useEffect, useState} from 'react';
 import { Button } from 'react-native';
 import styled from 'styled-components/native';
 import Center from '../../../../components/center';
+import { AuthContext } from '../../../authProvider';
+import { AsyncStorage } from '@react-native-async-storage/async-storage';
 //import LottieView from 'lottie-react-native';
 
 const Cont = styled.View`
@@ -28,6 +30,11 @@ const ButtonContainer = styled.View`
 `;
 
 const StartPage = ({navigation}) => {
+    const {login} = useContext(AuthContext);
+    const [email, setEmail] = useState('')
+    const [password, setPassword] = useState('')
+    
+    
     return (
         <Cont>
             <Center>
